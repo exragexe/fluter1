@@ -9,7 +9,9 @@ class TextLine extends StatelessWidget {
     return Text(
       text,
       textDirection: TextDirection.ltr,
+    
       style: const TextStyle(fontSize: 24),
+      
     );
   }
 }

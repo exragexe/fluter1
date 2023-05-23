@@ -7,24 +7,12 @@ class Application extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
+        backgroundColor:  Color.fromARGB(255, 109, 119, 177),
         
-        appBar: AppBar(title: const Text("Questionnaire"),
-        backgroundColor: const Color.fromARGB(255, 128, 128, 128),
-        leading: const Icon(Icons.person),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.notification_important),
-            onPressed: (){}),
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: (){}),
-          IconButton(
-            icon: const Icon(Icons.logout),
-            onPressed: (){}),
-        ],),
         body: Home(),
+          
         ),
       debugShowCheckedModeBanner: false,
       

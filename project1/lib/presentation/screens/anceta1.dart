@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:project1/presentation/widgets/text_line.dart';
 
-class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+class Anceta1 extends StatefulWidget {
+  const Anceta1({Key? key}) : super(key: key);
   @override
-  _HomeState createState() => _HomeState();
+  _Anceta1State createState() => _Anceta1State();
 }
-class _HomeState extends State<Home> {
+class _Anceta1State extends State<Anceta1> {
   var textlines = [
-    "Oleg Faradey",
-    "+380679340230",
-    "topman.oleg@gmail.com",
-    "Ukraine",
-    "Designer",
+    "Volodya Dovgyn",
+    "+380535136431",
+    "vol_122dya@gmail.com",
+    "USA",
+    "Software",
   ];
-  late bool isClicked=false;
+  bool isClicked=false;
   @override
   Widget build(BuildContext context) {
     return Center(
-      
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -32,7 +31,7 @@ class _HomeState extends State<Home> {
                 width: 400,
                 height: 450,
                 child: Image(
-                  image: AssetImage("assets/1.jpg"),
+                  image: AssetImage("assets/4.jpg"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -128,7 +127,7 @@ class _HomeState extends State<Home> {
                     icon: const Icon(Icons.arrow_back),
                     color: const Color.fromRGBO(83, 83, 83, 1),
                     onPressed: () {
-                      Navigator.pushNamed(context, "/thi");
+                      Navigator.pushNamed(context, "/");
                     },
                     
                   ),
@@ -143,7 +142,7 @@ class _HomeState extends State<Home> {
                     icon: const Icon(Icons.arrow_forward),
                     color: const Color.fromRGBO(83, 83, 83, 1),
                     onPressed: () {
-                      Navigator.pushNamed(context, "/sec");
+                      Navigator.pushNamed(context, "/thi");
                     },
                   ),
                 ),
@@ -151,7 +150,6 @@ class _HomeState extends State<Home> {
             ],
           ),
         ], 
-        
       ),
     );
   }

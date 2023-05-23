@@ -1,6 +1,6 @@
 {
-    "name": "project1",
-    "short_name": "project1",
+    "name": "Swipify",
+    "short_name": "Swipify",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
