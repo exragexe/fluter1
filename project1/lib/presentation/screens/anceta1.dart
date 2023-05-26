@@ -4,6 +4,7 @@ import 'package:project1/presentation/widgets/text_line.dart';
 class Anceta1 extends StatefulWidget {
   const Anceta1({Key? key}) : super(key: key);
   @override
+  // ignore: library_private_types_in_public_api
   _Anceta1State createState() => _Anceta1State();
 }
 class _Anceta1State extends State<Anceta1> {
@@ -17,23 +18,28 @@ class _Anceta1State extends State<Anceta1> {
   bool isClicked=false;
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Material(
+      child:Container( 
+       color:Color.fromARGB(255, 109, 132, 139),
+      child:Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Stack(
             
             children: [
-              CircularProgressIndicator(color: Colors.blueGrey,),
-              ClipRRect(
+              
+             Padding(padding: const EdgeInsets.only(bottom:20),
+              child:ClipRRect(
                 borderRadius: BorderRadius.circular(30),
                 child:const SizedBox(
                 width: 400,
-                height: 450,
+                height: 400,
                 child: Image(
                   image: AssetImage("assets/4.jpg"),
                   fit: BoxFit.cover,
                 ),
+              ),
               ),
               ),
               Positioned(
@@ -150,6 +156,8 @@ class _Anceta1State extends State<Anceta1> {
             ],
           ),
         ], 
+      ),
+      ),
       ),
     );
   }

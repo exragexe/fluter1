@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:project1/presentation/widgets/text_line.dart';
 
+
+
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
   @override
+  
+  // ignore: library_private_types_in_public_api
   _HomeState createState() => _HomeState();
 }
 class _HomeState extends State<Home> {
+  
   var textlines = [
     "Oleg Faradey",
     "+380679340230",
@@ -14,27 +19,36 @@ class _HomeState extends State<Home> {
     "Ukraine",
     "Designer",
   ];
-  late bool isClicked=false;
+   bool isClicked=false;
+   
   @override
   Widget build(BuildContext context) {
-    return Center(
-      
+    
+    return Material(
+      child:Container( 
+       color:Color.fromARGB(255, 109, 132, 139),
+      child:Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Stack(
             
             children: [
-              CircularProgressIndicator(color: Colors.blueGrey,),
-              ClipRRect(
+              
+              Padding(padding: const EdgeInsets.only(bottom:20),
+              child:ClipRRect(
+                
                 borderRadius: BorderRadius.circular(30),
                 child:const SizedBox(
                 width: 400,
-                height: 450,
+                height: 400,
+                
                 child: Image(
                   image: AssetImage("assets/1.jpg"),
                   fit: BoxFit.cover,
                 ),
+                
+              ),
               ),
               ),
               Positioned(
@@ -81,6 +95,7 @@ class _HomeState extends State<Home> {
                 child: Padding(
                   padding: EdgeInsets.only(top: 0),
                   child: SizedBox(
+                    
                     width: 400,
                     height: 450,
                     child: Image(
@@ -92,11 +107,15 @@ class _HomeState extends State<Home> {
               ),
               
               Align(
+                
                 alignment: Alignment.center,
                 child: Column(
+                  
+                  
                   children: List.generate(
                     textlines.length,
                     (index) {
+                      
                       return Column(
                         children: [
                           Padding(
@@ -151,8 +170,11 @@ class _HomeState extends State<Home> {
             ],
           ),
         ], 
-        
       ),
+
+      ),
+      ),
+      
     );
   }
 }

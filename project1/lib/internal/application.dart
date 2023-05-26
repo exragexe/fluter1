@@ -1,22 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:project1/presentation/screens/anceta1.dart';
+import 'package:project1/presentation/screens/anceta2.dart';
 import 'package:project1/presentation/screens/home.dart';
 
 
 class Application extends StatelessWidget {
-  const Application({super.key});
+  const Application({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        backgroundColor:  Color.fromARGB(255, 109, 119, 177),
+    const CircularProgressIndicator(color: Colors.blueGrey,);
+    
+    return MaterialApp(
         
-        body: Home(),
-          
-        ),
-      debugShowCheckedModeBanner: false,
-      
-      themeMode: ThemeMode.dark,
-    );
+        initialRoute: '/',
+        routes: {
+          '/':(context) => const Home(),
+          '/sec': (context) => const Anceta1(),
+          '/thi': (context) => const Anceta2(),
+        },
+        debugShowCheckedModeBanner: false,
+        themeMode: ThemeMode.dark,
+      );
+    
   }
 }
